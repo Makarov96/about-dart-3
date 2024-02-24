@@ -120,13 +120,7 @@ class BlocManagement {
   Future<void> prompt({required message}) async {
     try {
       _stateController.add(Loading());
-      // final model = GenerativeModel(
-      //     model: 'gemini-pro',
-      //     apiKey: 'AIzaSyCpoUfe-jnmd6H_cdOdWFsQ4TOfpGec_XU');
-      // final content = [Content.text('Hello gemini')];
-      // final response = await model.generateContent(content);
 
-      // _stateController.add(Loaded(data: response.text ?? ''));
       _stateController.add(Loaded(data: 'Value from Backend'));
     } catch (e) {
       _stateController.add(ErrorState(message: e.toString(), preffix: '0'));

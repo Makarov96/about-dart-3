@@ -9,12 +9,17 @@ abstract class ClassName {
   void helloWord();
 }
 
-final class Constants {
+final class Constants extends ClassName {
   // Immutable value representing pi
   static const double PI = 3.14159;
 
   // Method to calculate the area of a circle
   static double calculateCircleArea(double radius) {
     return PI * radius * radius;
+  }
+
+  @override
+  void helloWord() {
+    // TODO: implement helloWord
   }
 }
